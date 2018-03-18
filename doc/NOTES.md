@@ -18,4 +18,8 @@ In the project directory
     mkdir app
     cd app && touch __init__.py
 
+## Running the app
+After setting up the app, I ran it with
 
+    export FLASK_APP=flask_tutorial.py
+    flask run
