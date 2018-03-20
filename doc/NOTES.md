@@ -23,3 +23,7 @@ After setting up the app, I ran it with
 
     export FLASK_APP=flask_tutorial.py
     flask run
+
+## Templates (probably a simple solution for returning json)
+
+
