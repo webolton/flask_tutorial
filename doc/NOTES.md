@@ -24,9 +24,16 @@ After setting up the app, I ran it with
     export FLASK_APP=flask_tutorial.py
     flask run
 
+## Loading the app into the python interpreter
+In order to check that the secret_key is loaded, you can load the app into the Python environment
+
+    from flask_tutorial import app
+    app.config['SECRET_KEY']
+
 ## Templates (probably a simple solution for returning json)
 Noteworthy:
 
 - The out-of-the box template interpeter uses `{% some_pyton %}` to imbed Python logic and `{{ some_variable }}` for displaying text.
+
 
 
