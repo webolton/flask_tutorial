@@ -25,5 +25,8 @@ After setting up the app, I ran it with
     flask run
 
 ## Templates (probably a simple solution for returning json)
+Noteworthy:
+
+- The out-of-the box template interpeter uses `{% some_pyton %}` to imbed Python logic and `{{ some_variable }}` for displaying text.
 
 
