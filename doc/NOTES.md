@@ -21,8 +21,8 @@ In the project directory
 ## Running the app
 After setting up the app, I ran it with
 
-    export FLASK_APP=flask_tutorial.py
-    flask run
+    export FLASK_APP=flask_tutorial.py && flask run
+    # Probably should put these sorts of utility commands into a Makfile
 
 ## Loading the app into the python interpreter
 In order to check that the secret_key is loaded, you can load the app into the Python environment
@@ -33,7 +33,10 @@ In order to check that the secret_key is loaded, you can load the app into the P
 ## Templates (probably a simple solution for returning json)
 Noteworthy:
 
-- The out-of-the box template interpeter uses `{% some_pyton %}` to imbed Python logic and `{{ some_variable }}` for displaying text.
+- The out-of-the box template interpreter uses `{% some_pyton %}` to embed Python logic and `{{ some_variable }}` for displaying text.
+
+## The routes file
+It appears that the decorators in the routes file must immediately proceed the actual route handler.
 
 
 
