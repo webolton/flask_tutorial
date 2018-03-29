@@ -5,3 +5,6 @@ __pycache__/
 
 # Enviroment
 /flask_env
+
+#SQL Lite DB
+app.db
