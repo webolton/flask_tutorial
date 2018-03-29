@@ -21,7 +21,7 @@ In the project directory
 ## Running the app
 After setting up the app, I ran it with
 
-    export FLASK_APP=flask_tutorial.py && flask run
+    export FLASK_APP=flask_tutorial.py && flask run  
     # Probably should put these sorts of utility commands into a Makfile
 
 ## Loading the app into the python interpreter
@@ -38,5 +38,18 @@ Noteworthy:
 ## The routes file
 It appears that the decorators in the routes file must immediately proceed the actual route handler.
 
+## Models
+In the user model, there is a method called `__rpr__` which appears to be a built-in Python that tells the program how to print information about the class.
 
+In the current project, I can print this information in the Python interpreter with:
+
+    from flask_tutorial import app # Load the app into the interpreter
+    from app.models import User # Load the model into the intpreter
+    u = User(username='susan', email='susan@example.com') # Instantiate a user
+    u # Call the user which will be printed with the formatting designated in `__rpr__`
+
+## Running migrations
+Flask has a database schema managment plugin. It appears that these sorts of utility commands don't know about the environment or the application context right out of the box, so you have to specifiy the application before trying to run the command. So, for example:
+
+    FLASK_APP=flask_tutorial.py flask db migrate # This appears to be for all of the calls to the `flask` utility.
 
