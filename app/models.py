@@ -1,3 +1,4 @@
+from flask import url_for
 from datetime import datetime
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -22,6 +23,9 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def avatar(self):
+        return url_for('static', filename='img/python.png')
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
