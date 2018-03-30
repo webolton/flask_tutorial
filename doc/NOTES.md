@@ -53,3 +53,10 @@ Flask has a database schema managment plugin. It appears that these sorts of uti
 
     FLASK_APP=flask_tutorial.py flask db migrate # This appears to be for all of the calls to the `flask` utility.
 
+For running a single migration, it looks like it has to go in two steps. First, the migration files are written, a flask command to apply the migration is run, and then the migration is run on the database. Therefore, after I wrote the "Posts" model, I ran:
+
+    FLASK_APP=flask_tutorial.py flask db migrate -m "posts table"
+
+and then
+
+    FLASK_APP=flask_tutorial.py flask db migrate
