@@ -60,3 +60,8 @@ For running a single migration, it looks like it has to go in two steps. First, 
 and then
 
     FLASK_APP=flask_tutorial.py flask db migrate
+
+## Creating an interactive shell
+As discussed above, you can load the application into the Python interpreter in order to test out the app. You can also implement an interactive shell that will import the app and the models for you that behaves something like a Rails console. This is done in the application file. The command to run it is
+
+    FLASK_APP=flask_tutorial.py flask shell
