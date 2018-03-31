@@ -65,3 +65,12 @@ and then
 As discussed above, you can load the application into the Python interpreter in order to test out the app. You can also implement an interactive shell that will import the app and the models for you that behaves something like a Rails console. This is done in the application file. The command to run it is
 
     FLASK_APP=flask_tutorial.py flask shell
+
+## Error Handling and Debugging
+You can run the application in debug mode with:
+
+    export FLASK_DEBUG=1
+
+When the appliacation throws an error, you get an interactive html interface into which you can actually step into the code and type in a Python interpreter. As one can imagine, you shouldn't run the app in this mode for production.
+
+I also implemented some custom error pages.
