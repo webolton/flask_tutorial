@@ -21,7 +21,7 @@ In the project directory
 ## Running the app
 After setting up the app, I ran it with
 
-    export FLASK_APP=flask_tutorial.py && flask run  
+    export FLASK_APP=flask_tutorial.py && flask run
     # Probably should put these sorts of utility commands into a Makfile
 
 ## Loading the app into the python interpreter
@@ -73,4 +73,7 @@ You can run the application in debug mode with:
 
 When the appliacation throws an error, you get an interactive html interface into which you can actually step into the code and type in a Python interpreter. As one can imagine, you shouldn't run the app in this mode for production.
 
-I also implemented some custom error pages.
+I also implemented some custom error pages which are configured in the main application file.
+
+## Mailer
+All of the mailer configuration is here. If it were to be used, all of the environment variables would have to be set in order for it to work.
