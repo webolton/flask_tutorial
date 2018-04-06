@@ -21,7 +21,7 @@ In the project directory
 ## Running the app
 After setting up the app, I ran it with
 
-    export FLASK_APP=flask_tutorial.py && flask run
+    export FLASK_DEBUG=1 export FLASK_APP=flask_tutorial.py && flask run
     # Probably should put these sorts of utility commands into a Makfile
 
 ## Loading the app into the python interpreter
@@ -75,5 +75,11 @@ When the appliacation throws an error, you get an interactive html interface int
 
 I also implemented some custom error pages which are configured in the main application file.
 
+There is also a way to configure logging to a file, including way to make the logs rotate.
+
 ## Mailer
 All of the mailer configuration is here. If it were to be used, all of the environment variables would have to be set in order for it to work.
+
+## Join Tables
+The followers table is pretty confusing. Basicaly, the table is not actually a class and seems to be made in the example simply to hold the keys needed for the join.
+
