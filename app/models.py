@@ -1,10 +1,12 @@
-from flask import url_for
 from datetime import datetime
+from hashlib import md5
 from time import time
-import jwt
-from app import db, login, app
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import current_app, url_for
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+import jwt
+from app import db, login
+
 
 @login.user_loader
 def load_user(id):
